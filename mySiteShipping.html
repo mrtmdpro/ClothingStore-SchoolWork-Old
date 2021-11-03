@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>МАГАЗИН ТЕХНИКИ</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="myDesigns.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .myDesigns-sidebar a {
+            font-family: "Roboto", sans-serif
+        }
+
+        body, h1, h2, h3, h4, h5, h6, .myDesigns-wide {
+            font-family: "Montserrat", sans-serif;
+        }
+    </style>
+</head>
+<body class="myDesigns-content" style="max-width:1200px">
+    <!-- Sidebar/menu -->
+    <nav class="myDesigns-sidebar myDesigns-bar-block myDesigns-white myDesigns-collapse myDesigns-top" style="z-index:3;width:250px" id="mySidebar">
+        <div class="myDesigns-container myDesigns-display-container myDesigns-padding-16">
+            <i onclick="myDesigns_close()" class="fa fa-remove myDesigns-hide-large myDesigns-button myDesigns-display-topright"></i>
+            <h3 class="myDesigns-wide"><b>TA MINH DUC</b></h3>
+        </div>
+        <div class="myDesigns-padding-64 myDesigns-large myDesigns-text-grey" style="font-weight:bold">
+            <a href="#" class="myDesigns-button myDesigns-block myDesigns-white myDesigns-left-align">Каталог</a>
+            <a href="#" class="myDesigns-bar-item myDesigns-button">Новости</a>
+            <a href="#" class="myDesigns-bar-item myDesigns-button">Форма доставки</a>
+            <a href="#footer" class="myDesigns-bar-item myDesigns-button">Контакты</a>
+            <a href="#footer" class="myDesigns-bar-item myDesigns-button">О нас</a>
+        </div>
+        <a href="javascript:void(0)" class="myDesigns-bar-item myDesigns-button myDesigns-padding" onclick="document.getElementById('newsletter').style.display='block'">Новостная рассылка</a>
+        <a href="#footer" class="myDesigns-bar-item myDesigns-button myDesigns-padding">Подписаться</a>
+    </nav>
+    <!-- Top menu on small screens -->
+    <header class="myDesigns-bar myDesigns-top myDesigns-hide-large myDesigns-black myDesigns-xlarge">
+        <div class="myDesigns-bar-item myDesigns-padding-24 myDesigns-wide">TA MINH DUC</div>
+        <a href="javascript:void(0)" class="myDesigns-bar-item myDesigns-button myDesigns-padding-24 myDesigns-right" onclick="myDesigns_open()"><i class="fa fa-bars"></i></a>
+    </header>
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="myDesigns-overlay myDesigns-hide-large" onclick="myDesigns_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    <!-- !PAGE CONTENT! -->
+    <div class="myDesigns-main" style="margin-left:250px">
+        <!-- Push down content on small screens -->
+        <div class="myDesigns-hide-large" style="margin-top:83px"></div>
+        <!-- Top header -->
+        <header class="myDesigns-container myDesigns-xlarge">
+            <p class="myDesigns-left">Форма доставки</p>
+            <p class="myDesigns-right">
+                <i class="fa fa-shopping-cart myDesigns-margin-right"></i>
+                <i class="fa fa-search"></i>
+            </p>
+        </header>
+        <div class="container">
+            <form action="/action_page.php">
+                <div class="row">
+                    <div class="col-25">
+                        <label for="fname">Фаимлия</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="fname" name="firstname" placeholder="Твоя фамилия..">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="lname">Имя</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="lname" name="lastname" placeholder="Твоё имя..">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="oname">Отчество</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="oname" name="oname" placeholder="Твоё отчество..">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="phone">Номер телефона</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="tel" id="phone" name="phone" placeholder="Номер телефона">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="country">Старна</label>
+                    </div>
+                    <div class="col-75">
+                        <select id="country" name="country">
+                            <option value="russia">Россия</option>
+                            <option value="vietnam">Вьетнам</option>
+                            <option value="usa">США</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="subject">Subject</label>
+                    </div>
+                    <div class="col-75">
+                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+        <!-- Subscribe section -->
+        <div class="myDesigns-container myDesigns-black myDesigns-padding-32">
+            <h1>Подписаться</h1>
+            <p>Чтобы получить специальные предложения и VIP-обслуживание:</p>
+            <p><input class="myDesigns-input myDesigns-border" type="email" placeholder="Введить email" style="width:100%"></p>
+            <button type="button" class="myDesigns-button myDesigns-red myDesigns-margin-bottom">Подписываюсь</button>
+        </div>
+        <!-- Footer -->
+        <footer class="myDesigns-padding-64 myDesigns-light-grey myDesigns-small myDesigns-center" id="footer">
+            <div class="myDesigns-row-padding">
+                <div class="myDesigns-col s4">
+                    <h4>Контакты</h4>
+                    <p>Вопросы? Давайте.</p>
+                    <form action="/action_page.php" target="_blank">
+                        <p><input class="myDesigns-input myDesigns-border" type="text" placeholder="Имя" name="name" required></p>
+                        <p><input class="myDesigns-input myDesigns-border" type="email" placeholder="Email" name="Email" required></p>
+                        <p><input class="myDesigns-input myDesigns-border" type="text" placeholder="Тема" name="Subject" required></p>
+                        <p><input class="myDesigns-input myDesigns-border" type="text" placeholder="Сообщение" name="Message" required></p>
+                        <button type="submit" class="myDesigns-button myDesigns-block myDesigns-black">Отправка</button>
+                    </form>
+                </div>
+                <div class="myDesigns-col s4">
+                    <h4>О нас</h4>
+                    <p><a href="#">О нас, короче</a></p>
+                    <p><a href="#">Мы нанимаем</a></p>
+                    <p><a href="#">Поддержка</a></p>
+                    <p><a href="#">Найти магазин</a></p>
+                    <p><a href="#">Доставка</a></p>
+                    <p><a href="#">Оплата</a></p>
+                    <p><a href="#">Промокод</a></p>
+                    <p><a href="#">Вернуться</a></p>
+                    <p><a href="#">Помощь</a></p>
+                </div>
+                <div class="myDesigns-col s4 myDesigns-justify">
+                    <h4>Магазин</h4>
+                    <p><i class="fa fa-fw fa-map-marker"></i> Ta Minh Duc</p>
+                    <p><i class="fa fa-fw fa-phone"></i> +7(964)7972966</p>
+                    <p><i class="fa fa-fw fa-envelope"></i> TaMD@mpei.ru</p>
+                    <h4>Принимаем</h4>
+                    <p><i class="fa fa-fw fa-cc-amex"></i> МИР</p>
+                    <p><i class="fa fa-fw fa-credit-card"></i> VISA, Mastercard</p>
+                    <br>
+                    <i class="fa fa-facebook-official myDesigns-hover-opacity myDesigns-large"></i>
+                    <i class="fa fa-instagram myDesigns-hover-opacity myDesigns-large"></i>
+                    <i class="fa fa-snapchat myDesigns-hover-opacity myDesigns-large"></i>
+                    <i class="fa fa-pinterest-p myDesigns-hover-opacity myDesigns-large"></i>
+                    <i class="fa fa-twitter myDesigns-hover-opacity myDesigns-large"></i>
+                    <i class="fa fa-linkedin myDesigns-hover-opacity myDesigns-large"></i>
+                </div>
+            </div>
+        </footer>
+        <div class="myDesigns-black myDesigns-center myDesigns-padding-24">Ta Minh Duc IE-65-19</div>
+        <!-- End page content -->
+    </div>
+        <!-- Newsletter Modal -->
+        <div id="newsletter" class="myDesigns-modal">
+            <div class="myDesigns-modal-content myDesigns-animate-zoom" style="padding:32px">
+                <div class="myDesigns-container myDesigns-white myDesigns-center">
+                    <i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove myDesigns-right myDesigns-button myDesigns-transparent myDesigns-xxlarge"></i>
+                    <h2 class="myDesigns-wide">РАССЫЛКА</h2>
+                    <p>Присоединяйтесь к нашему списку рассылки, чтобы получать новости о новых поступлениях и специальных предложениях.</p>
+                    <p><input class="myDesigns-input myDesigns-border" type="email" placeholder="Введить email"></p>
+                    <button type="button" class="myDesigns-button myDesigns-padding-large myDesigns-red myDesigns-margin-bottom" onclick="document.getElementById('newsletter').style.display='none'">Подписаться</button>
+                </div>
+            </div>
+        </div>
+        <script>
+            // Accordion
+            function myAccFunc() {
+                var x = document.getElementById("demoAcc");
+                if (x.className.indexOf("myDesigns-show") == -1) {
+                    x.className += " myDesigns-show";
+                } else {
+                    x.className = x.className.replace(" myDesigns-show", "");
+                }
+            }
+
+            // Click on the "Jeans" link on page load to open the accordion for demo purposes
+            document.getElementById("myBtn").click();
+
+
+            // Open and close sidebar
+            function myDesigns_open() {
+                document.getElementById("mySidebar").style.display = "block";
+                document.getElementById("myOverlay").style.display = "block";
+            }
+
+            function myDesigns_close() {
+                document.getElementById("mySidebar").style.display = "none";
+                document.getElementById("myOverlay").style.display = "none";
+            }
+        </script>
+</body>
+</html>
