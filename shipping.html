@@ -26,9 +26,9 @@
             <h3 class="myDesigns-wide"><b>TA MINH DUC</b></h3>
         </div>
         <div class="myDesigns-padding-64 myDesigns-large myDesigns-text-grey" style="font-weight:bold">
-            <a href="index.html" class="myDesigns-button myDesigns-block myDesigns-white myDesigns-left-align">Каталог</a>
+            <a href="index.html" class="myDesigns-bar-item myDesigns-button">Каталог</a>
             <a href="index.html" class="myDesigns-bar-item myDesigns-button">Новости</a>
-            <a href="shipping.html" class="myDesigns-bar-item myDesigns-button">Форма доставки</a>
+            <a href="shipping.html" class="myDesigns-button myDesigns-block myDesigns-white myDesigns-left-align">Форма доставки</a>
             <a href="#footer" class="myDesigns-bar-item myDesigns-button">Контакты</a>
             <a href="#footer" class="myDesigns-bar-item myDesigns-button">О нас</a>
         </div>
@@ -48,79 +48,71 @@
         <div class="myDesigns-hide-large" style="margin-top:83px"></div>
         <!-- Top header -->
         <header class="myDesigns-container myDesigns-xlarge">
-            <p class="myDesigns-left">Компьютерные Техники</p>
+            <p class="myDesigns-left">Форма доставки</p>
             <p class="myDesigns-right">
                 <i class="fa fa-shopping-cart myDesigns-margin-right"></i>
                 <i class="fa fa-search"></i>
             </p>
         </header>
-        <!-- Image header -->
-        <div class="myDesigns-display-container myDesigns-container">
-            <img src="images/parts.jpg" alt="RTX 3060" style="width:100%">
-            <div class="myDesigns-display-topleft myDesigns-text-white" style="padding:24px 48px">
-                <h1 class="myDesigns-jumbo myDesigns-hide-small">Лучшие цены</h1>
-                <h1 class="myDesigns-hide-large myDesigns-hide-medium">Лучшие цены</h1>
-                <h1 class="myDesigns-hide-small">КОЛЛЕКЦИЯ 2021</h1>
-                <p><a href="#items" class="myDesigns-button myDesigns-black myDesigns-padding-large myDesigns-large">В ПОКУПКУ</a></p>
-            </div>
-        </div>
-        <div class="myDesigns-container myDesigns-text-grey" id="items">
-            <p>8 товары</p>
-        </div>
-        <!-- Product grid -->
-        <div class="myDesigns-row myDesigns-grayscale">
-            <div class="myDesigns-col l3 s6">
-                <div class="myDesigns-container">
-                    <img src="images/parts1.jpg" style="width:100%">
-                    <p>nVidia RTX 3060<br><b>$24.99</b></p>
-                </div>
-                <div class="myDesigns-container">
-                    <img src="images/parts2.jpg" style="width:100%">
-                    <p>AMD Ryzen 9 5900x<br><b>$19.99</b></p>
-                </div>
-            </div>
-            <div class="myDesigns-col l3 s6">
-                <div class="myDesigns-container">
-                    <div class="myDesigns-display-container">
-                        <img src="images/parts3.jpg" style="width:100%">
-                        <span class="myDesigns-tag myDesigns-display-topleft">New</span>
-                        <div class="myDesigns-display-middle myDesigns-display-hover">
-                            <button class="myDesigns-button myDesigns-black">Buy now <i class="fa fa-shopping-cart"></i></button>
-                        </div>
+        <div class="container">
+            <form action="/action_page.php">
+                <div class="row">
+                    <div class="col-25">
+                        <label for="fname">Фаимлия</label>
                     </div>
-                    <p>Corsair Dominator DDR5<br><b>$19.99</b></p>
-                </div>
-                <div class="myDesigns-container">
-                    <img src="images/parts4.jpg" style="width:100%">
-                    <p>Intel Core i9 11900k<br><b>$20.50</b></p>
-                </div>
-            </div>
-            <div class="myDesigns-col l3 s6">
-                <div class="myDesigns-container">
-                    <img src="images/parts5.jpg" style="width:100%">
-                    <p>msi Z490<br><b>$20.50</b></p>
-                </div>
-                <div class="myDesigns-container">
-                    <div class="myDesigns-display-container">
-                        <img src="images/parts6.jpg" style="width:100%">
-                        <span class="myDesigns-tag myDesigns-display-topleft">Sale</span>
-                        <div class="myDesigns-display-middle myDesigns-display-hover">
-                            <button class="myDesigns-button myDesigns-black">Buy now <i class="fa fa-shopping-cart"></i></button>
-                        </div>
+                    <div class="col-75">
+                        <input type="text" id="fname" name="firstname" placeholder="Твоя фамилия..">
                     </div>
-                    <p>Samsung EVO 980 PRO<br><b class="myDesigns-text-red">$14.99</b></p>
                 </div>
-            </div>
-            <div class="myDesigns-col l3 s6">
-                <div class="myDesigns-container">
-                    <img src="images/parts7.jpg" style="width:100%">
-                    <p>Logitech G Pro<br><b>$14.99</b></p>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="lname">Имя</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="lname" name="lastname" placeholder="Твоё имя..">
+                    </div>
                 </div>
-                <div class="myDesigns-container">
-                    <img src="images/parts8.jpg" style="width:100%">
-                    <p>Logitech G Pro X<br><b>$24.99</b></p>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="oname">Отчество</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="oname" name="oname" placeholder="Твоё отчество..">
+                    </div>
                 </div>
-            </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="phone">Номер телефона</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="tel" id="phone" name="phone" placeholder="Номер телефона">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="country">Старна</label>
+                    </div>
+                    <div class="col-75">
+                        <select id="country" name="country">
+                            <option value="russia">Россия</option>
+                            <option value="vietnam">Вьетнам</option>
+                            <option value="usa">США</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="subject">Subject</label>
+                    </div>
+                    <div class="col-75">
+                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
         </div>
         <!-- Subscribe section -->
         <div class="myDesigns-container myDesigns-black myDesigns-padding-32">
@@ -176,43 +168,43 @@
         <div class="myDesigns-black myDesigns-center myDesigns-padding-24">Ta Minh Duc IE-65-19</div>
         <!-- End page content -->
     </div>
-    <!-- Newsletter Modal -->
-    <div id="newsletter" class="myDesigns-modal">
-        <div class="myDesigns-modal-content myDesigns-animate-zoom" style="padding:32px">
-            <div class="myDesigns-container myDesigns-white myDesigns-center">
-                <i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove myDesigns-right myDesigns-button myDesigns-transparent myDesigns-xxlarge"></i>
-                <h2 class="myDesigns-wide">РАССЫЛКА</h2>
-                <p>Присоединяйтесь к нашему списку рассылки, чтобы получать новости о новых поступлениях и специальных предложениях.</p>
-                <p><input class="myDesigns-input myDesigns-border" type="email" placeholder="Введить email"></p>
-                <button type="button" class="myDesigns-button myDesigns-padding-large myDesigns-red myDesigns-margin-bottom" onclick="document.getElementById('newsletter').style.display='none'">Подписаться</button>
+        <!-- Newsletter Modal -->
+        <div id="newsletter" class="myDesigns-modal">
+            <div class="myDesigns-modal-content myDesigns-animate-zoom" style="padding:32px">
+                <div class="myDesigns-container myDesigns-white myDesigns-center">
+                    <i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove myDesigns-right myDesigns-button myDesigns-transparent myDesigns-xxlarge"></i>
+                    <h2 class="myDesigns-wide">РАССЫЛКА</h2>
+                    <p>Присоединяйтесь к нашему списку рассылки, чтобы получать новости о новых поступлениях и специальных предложениях.</p>
+                    <p><input class="myDesigns-input myDesigns-border" type="email" placeholder="Введить email"></p>
+                    <button type="button" class="myDesigns-button myDesigns-padding-large myDesigns-red myDesigns-margin-bottom" onclick="document.getElementById('newsletter').style.display='none'">Подписаться</button>
+                </div>
             </div>
         </div>
-    </div>
-    <script>
-        // Accordion
-        function myAccFunc() {
-            var x = document.getElementById("demoAcc");
-            if (x.className.indexOf("myDesigns-show") == -1) {
-                x.className += " myDesigns-show";
-            } else {
-                x.className = x.className.replace(" myDesigns-show", "");
+        <script>
+            // Accordion
+            function myAccFunc() {
+                var x = document.getElementById("demoAcc");
+                if (x.className.indexOf("myDesigns-show") == -1) {
+                    x.className += " myDesigns-show";
+                } else {
+                    x.className = x.className.replace(" myDesigns-show", "");
+                }
             }
-        }
 
-        // Click on the "Jeans" link on page load to open the accordion for demo purposes
-        document.getElementById("myBtn").click();
+            // Click on the "Jeans" link on page load to open the accordion for demo purposes
+            document.getElementById("myBtn").click();
 
 
-        // Open and close sidebar
-        function myDesigns_open() {
-            document.getElementById("mySidebar").style.display = "block";
-            document.getElementById("myOverlay").style.display = "block";
-        }
+            // Open and close sidebar
+            function myDesigns_open() {
+                document.getElementById("mySidebar").style.display = "block";
+                document.getElementById("myOverlay").style.display = "block";
+            }
 
-        function myDesigns_close() {
-            document.getElementById("mySidebar").style.display = "none";
-            document.getElementById("myOverlay").style.display = "none";
-        }
-    </script>
+            function myDesigns_close() {
+                document.getElementById("mySidebar").style.display = "none";
+                document.getElementById("myOverlay").style.display = "none";
+            }
+        </script>
 </body>
 </html>
