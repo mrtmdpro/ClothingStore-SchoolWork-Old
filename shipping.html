@@ -53,7 +53,7 @@
                 <i class="fa fa-shopping-cart myDesigns-margin-right"></i>
                 <i class="fa fa-search"></i>
             </p>
-            <form class="myDesigns-right">
+            <form>
                 <input type="text" name="search" placeholder="Search..">
             </form>
         </header>
@@ -89,6 +89,35 @@
                     </div>
                     <div class="col-75">
                         <input type="tel" id="phone" name="phone" placeholder="Номер телефона">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="email" id="email" name="email" placeholder="Электронная почта">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="transType">Тип отгрузки</label>
+                    </div>
+                    <div class="col-75">
+                        <div class="form_radio_btn">
+                            <input id="radio1" type="radio" name="radio" value="Casual" checked>
+                            <label for="radio1">Обычно</label>
+                        </div>
+
+                        <div class="form_radio_btn">
+                            <input id="radio2" type="radio" name="radio" value="Express">
+                            <label for="radio2">Экпресс</label>
+                        </div>
+
+                        <div class="form_radio_btn">
+                            <input id="radio3" type="radio" name="radio" value="EMS" disabled>
+                            <label for="radio3">EMS</label>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
