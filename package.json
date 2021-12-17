@@ -1,0 +1,19 @@
+{
+  "name": "hardware-store",
+  "version": "1.0.0",
+  "description": "Site for hardware store",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrtmdpro/mrtmdpro.github.io.git"
+  },
+  "author": "Ta Minh Duc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrtmdpro/mrtmdpro.github.io/issues"
+  },
+  "homepage": "https://github.com/mrtmdpro/mrtmdpro.github.io#readme"
+}
