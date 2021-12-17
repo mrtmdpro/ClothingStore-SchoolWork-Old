@@ -41,15 +41,25 @@
         headerRowCell.style.borderRadius = '100px';
       }
 
+
       const buttonContainer = document.createElement('div');
       container.appendChild(buttonContainer);
       buttonContainer.style.marginTop = '10px';
 
       const addRowButton = createButton(() => addRows(columns), 'Add row');
+
+      addRowButton.style.backgroundColor = '#4CAF50';
+      addRowButton.style.padding = '5px 5px';
+      addRowButton.style.borderRadius = '4px';
+      addRowButton.style.cursor = 'pointer';
+      addRowButton.style.float = 'left';
+      addRowButton.style.color = 'white';
+
       const deleteBottomRowButton = createButton(
         () => deleteBottomRow(),
         'Delete bottom row'
       );
+
       const clearButton = createButton(
         () => clearSpreadsheet(options.persistent !== undefined),
         'Clear sheet'
@@ -150,9 +160,16 @@
 
           const cellInput = document.createElement('input');
           cellDiv.appendChild(cellInput);
-          cellInput.setAttribute('type', columnTypes[columnType]);
-          cellInput.style.width = '90%';
-          cellInput.style.border = 'none';
+          if (columnType == 'Сумма ($)') {
+            columnTypes[columnType] = 5 * 10;
+            console.log(columnTypes);
+            cellInput.setAttribute('number', columnTypes[columnType]);
+          }
+          else {
+            cellInput.setAttribute('type', columnTypes[columnType]);
+            cellInput.style.width = '90%';
+            cellInput.style.border = 'none';
+          }
         }
 
         table.appendChild(cellRow);

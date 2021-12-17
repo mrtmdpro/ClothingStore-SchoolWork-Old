@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>МАГАЗИН ТЕХНИКИ</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="myDesigns.css">
+    <link rel="stylesheet" href="news.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer type="text/javascript" src="Spreadsheet.js"></script>
+    <script defer type="text/javascript" src="scripts.js"></script>
+    <style>
+        .myDesigns-sidebar a {
+            font-family: "Roboto", sans-serif
+        }
+
+        body, h1, h2, h3, h4, h5, h6, .myDesigns-wide {
+            font-family: "Montserrat", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="myDesigns-content" style="max-width:1200px">
+    <!-- Sidebar/menu -->
+    <nav class="myDesigns-sidebar myDesigns-bar-block myDesigns-white myDesigns-collapse myDesigns-top" style="z-index:3;width:250px" id="mySidebar">
+        <div class="myDesigns-container myDesigns-display-container myDesigns-padding-16">
+            <i onclick="myDesigns_close()" class="fa fa-remove myDesigns-hide-large myDesigns-button myDesigns-display-topright"></i>
+            <h3 class="myDesigns-wide"><b>TA MINH DUC</b></h3>
+        </div>
+        <div class="myDesigns-padding-64 myDesigns-large myDesigns-text-grey" style="font-weight:bold">
+            <a href="index.html" class="myDesigns-button myDesigns-block myDesigns-white myDesigns-left-align">Каталог</a>
+            <a href="news.html" class="myDesigns-bar-item myDesigns-button">Новости</a>
+            <a href="shipping.html" class="myDesigns-bar-item myDesigns-button">Форма доставки</a>
+            <a href="#footer" class="myDesigns-bar-item myDesigns-button">Контакты</a>
+            <a href="#footer" class="myDesigns-bar-item myDesigns-button">О нас</a>
+        </div>
+        <a href="javascript:void(0)" class="myDesigns-bar-item myDesigns-button myDesigns-padding" onclick="document.getElementById('newsletter').style.display='block'">Новостная рассылка</a>
+        <a href="#footer" class="myDesigns-bar-item myDesigns-button myDesigns-padding">Подписаться</a>
+    </nav>
+    <!-- Top menu on small screens -->
+    <header class="myDesigns-bar myDesigns-top myDesigns-hide-large myDesigns-black myDesigns-xlarge">
+        <div class="myDesigns-bar-item myDesigns-padding-24 myDesigns-wide">TA MINH DUC</div>
+        <a href="javascript:void(0)" class="myDesigns-bar-item myDesigns-button myDesigns-padding-24 myDesigns-right" onclick="myDesigns_open()"><i class="fa fa-bars"></i></a>
+    </header>
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="myDesigns-overlay myDesigns-hide-large" onclick="myDesigns_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    <!-- !PAGE CONTENT! -->
+    <div class="myDesigns-main" style="margin-left:250px">
+        <!-- Push down content on small screens -->
+        <div class="myDesigns-hide-large" style="margin-top:83px"></div>
+        <!-- Top header -->
+        <header class="myDesigns-container myDesigns-xlarge">
+            <p class="myDesigns-left">Новости о нас</p>
+            <p class="myDesigns-right">
+                <i class="fa fa-shopping-cart myDesigns-margin-right"></i>
+                <i class="fa fa-search"></i>
+            </p>
+            <!-- <form>
+                <input type="textfile" name="search" placeholder="Search..">
+            </form> -->
+        </header>
+        <!-- Image header -->
+        <div class="myDesigns-display-container myDesigns-container">
+            <img src="images/parts.jpg" alt="RTX 3060" style="width:100%">
+            <div class="myDesigns-display-topleft myDesigns-text-white" style="padding:24px 48px">
+                <h1 class="myDesigns-jumbo myDesigns-hide-small">Лучшие цены</h1>
+                <h1 class="myDesigns-hide-large myDesigns-hide-medium">Лучшие цены</h1>
+                <h1 class="myDesigns-hide-small">КОЛЛЕКЦИЯ 2021</h1>
+                <p><a href="#items" class="myDesigns-button myDesigns-black myDesigns-padding-large myDesigns-large">В ПОКУПКУ</a></p>
+            </div>
+        </div>
+
+        <div class="news">
+            <h3>Top 5 bàn phím bán chạy nhất</h3>
+            <div class="newsAboutProduct">
+                <h4>Top 5: Microsoft</h4>
+                <img src="images/mirosoft.jpeg">
+                <p>Microsoft là thương hiệu nổi tiếng được nhiều người trên thế giới tin dùng. Phụ kiện của thương hiệu này không thua kém những thương hiệu khác. Bàn phím không dây được dùng trên máy tính, tivi... với chất liệu bền, chất lượng, thiết kế đẹp, giá cả phù hợp.</p>
+            </div>
+            <div class="newsAboutProduct">
+                <h4>Top 4: Microsoft</h4>
+                <img src="images/mirosoft.jpeg">
+                <p>Microsoft là thương hiệu nổi tiếng được nhiều người trên thế giới tin dùng. Phụ kiện của thương hiệu này không thua kém những thương hiệu khác. Bàn phím không dây được dùng trên máy tính, tivi... với chất liệu bền, chất lượng, thiết kế đẹp, giá cả phù hợp.</p>
+            </div>
+            <div class="newsAboutProduct">
+                <h4>Top 3: Microsoft</h4>
+                <img src="images/mirosoft.jpeg">
+                <p>Microsoft là thương hiệu nổi tiếng được nhiều người trên thế giới tin dùng. Phụ kiện của thương hiệu này không thua kém những thương hiệu khác. Bàn phím không dây được dùng trên máy tính, tivi... với chất liệu bền, chất lượng, thiết kế đẹp, giá cả phù hợp.</p>
+            </div>
+            <div class="newsAboutProduct">
+                <h4>Top 2: Microsoft</h4>
+                <img src="images/mirosoft.jpeg">
+                <p>Microsoft là thương hiệu nổi tiếng được nhiều người trên thế giới tin dùng. Phụ kiện của thương hiệu này không thua kém những thương hiệu khác. Bàn phím không dây được dùng trên máy tính, tivi... với chất liệu bền, chất lượng, thiết kế đẹp, giá cả phù hợp.</p>
+            </div>
+            <div class="newsAboutProduct">
+                <h4>Top 1: Logitech</h4>
+                <img src="images/logitech.jpeg">
+                <p>Thông tin sản phẩm: Bàn phím không dây Logitech </p>                    
+                <ul>Thương hiệu: Thụy Sỹ</ul>
+                <ul>Sản xuất: Trung Quốc</ul>
+                <ul>Bảo hành chính hãng: 12 tháng</ul>
+                <ul>Tầm giá: 898.000VNĐ - 1.099.000VNĐ</ul>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        // Accordion
+        function myAccFunc() {
+            var x = document.getElementById("demoAcc");
+            if (x.className.indexOf("myDesigns-show") == -1) {
+                x.className += " myDesigns-show";
+            } else {
+                x.className = x.className.replace(" myDesigns-show", "");
+            }
+        }
+
+        // Click on the "Jeans" link on page load to open the accordion for demo purposes
+        document.getElementById("myBtn").click();
+
+
+        // Open and close sidebar
+        function myDesigns_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function myDesigns_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+    </script>
+</body>
+
