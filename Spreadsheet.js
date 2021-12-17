@@ -46,7 +46,7 @@
       container.appendChild(buttonContainer);
       buttonContainer.style.marginTop = '10px';
 
-      const addRowButton = createButton(() => addRows(columns), 'Add row');
+      const addRowButton = createButton(() => addRows(columns), 'Добавить ряд');
 
       addRowButton.style.backgroundColor = '#4CAF50';
       addRowButton.style.padding = '5px 5px';
@@ -57,12 +57,12 @@
 
       const deleteBottomRowButton = createButton(
         () => deleteBottomRow(),
-        'Delete bottom row'
+        'Удалить нижнюю строку'
       );
 
       const clearButton = createButton(
         () => clearSpreadsheet(options.persistent !== undefined),
-        'Clear sheet'
+        'Очистить таблицу'
       );
 
       buttonContainer.append(addRowButton, deleteBottomRowButton, clearButton);
@@ -160,7 +160,7 @@
 
           const cellInput = document.createElement('input');
           cellDiv.appendChild(cellInput);
-          if (columnType == 'Сумма ($)') {
+          if (columnType == 'Сумма (₽)') {
             columnTypes[columnType] = 5 * 10;
             console.log(columnTypes);
             cellInput.setAttribute('number', columnTypes[columnType]);
@@ -182,7 +182,7 @@
       if (table.children.length > 2) {
         table.removeChild(table.lastElementChild);
       } else {
-        alert('Cannot delete any more rows!');
+          alert('Невозможно удалить больше строк!');
       }
     };
 
