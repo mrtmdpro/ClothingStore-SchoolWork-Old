@@ -5,15 +5,17 @@
 .news h3 {
     display: block; 
     height: 40px;
-    width: 45%;
-    background-color: #7D85C6;
     font-weight: bold;
 }
 
 .news .newsAboutProduct p {
-    text-align: left;
+    text-align: left;       
     padding: 15px;
     font-size: 20px;
+}
+
+.news .newsAboutProduct h4 {
+    font-weight: bold;
 }
 
 .news .newsAboutProduct img {
