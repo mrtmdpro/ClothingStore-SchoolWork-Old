@@ -61,7 +61,7 @@
         </header>
         <div class="container">
             <div id="billingsheet"></div>
-            <form>
+            <form id="orderform">
                 <div class="row">
                     <div class="col-25">
                         <label for="fname">Фаимлия</label>
@@ -120,17 +120,17 @@
                     </div>
                     <div class="col-75">
                         <div class="form_radio_btn">
-                            <input id="radio1" type="radio" name="radio" value="Casual" checked>
+                            <input id="radio1" type="radio" name="radio" value=1 checked>
                             <label for="radio1">Обычно</label>
                         </div>
 
                         <div class="form_radio_btn">
-                            <input id="radio2" type="radio" name="radio" value="Express">
+                            <input id="radio2" type="radio" name="radio" value=2>
                             <label for="radio2">Экпресс</label>
                         </div>
 
                         <div class="form_radio_btn">
-                            <input id="radio3" type="radio" name="radio" value="EMS" disabled>
+                            <input id="radio3" type="radio" name="radio" value=3 disabled>
                             <label for="radio3">EMS</label>
                         </div>
                     </div>
@@ -140,7 +140,7 @@
                         <label for="arriveDate">Дата получения</label>
                     </div>
                     <div class="col-75">
-                        <input type="date" id="arriveDate" name="arriveDate" required>
+                        <input type="date" id="arriveDate" name="arriveDate">
                     </div>
                 </div>
                 <div class="row">
@@ -151,9 +151,17 @@
                         <textarea id="subject" name="subject" placeholder="Пишите что-нибудь..." style="height:200px"></textarea>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="subject">Промокод</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="promocode" name="promocode" placeholder="Промокод">
+                    </div>
+                </div>
                 <br>
                 <div class="row">
-                    <input type="submit" value="Заказать">
+                    <input type="submit" value="Заказать" onclick="">
                 </div>
             </form>
         </div>
@@ -225,8 +233,35 @@
     </div>
     <script>
         var date = new Date();
-        date.setDate(date.getDate() + 2);
+        date.setDate(date.getDate() + 3);
         arriveDate.min = date.toISOString().split("T")[0];
+
+        // Insert into DB
+        function insertIntoDB() {
+            var fname = document.getElementById("orderform").firstname.value;
+            var lname = document.getElementById("orderform").lastname.value;
+            var pname = document.getElementById("orderform").oname.value;
+            var phone = document.getElementById("orderform").phone.value;
+            var email = document.getElementById("orderform").email.value;
+            var country = document.getElementById("orderform").country.value;
+            var transType = document.getElementById("orderform").transType.value;
+            var arriveDate = document.getElementById("orderform").arriveDate.value;
+            var comment = document.getElementById("orderform").subject.value;
+
+            const sqlite3 = require('sqlite3').verbose();
+            let db = new sqlite3.Database('../db/orders.db');
+
+            // insert one row into the langs table
+            db.run(`INSERT INTO orders(fname,lname,pname,tel,email,country,typeofshipping,dateofreceive,comment) VALUES(?,?,?,?,?,?,?,?,?)`, [fname,lname,pname,phone,email,country,transType,arriveDate,comment], function (err) {
+                if (err) {
+                    return console.log(err.message);
+                }
+                // get the last insert id
+                console.log(`A row has been inserted with rowid ${this.lastID}`);
+            });
+            // close the database connection
+            db.close();
+        }
 
         // Accordion
         function myAccFunc() {
@@ -238,10 +273,6 @@
             }
         }
 
-        // Click on the "Jeans" link on page load to open the accordion for demo purposes
-        //document.getElementById("myBtn").click();
-
-
         // Open and close sidebar
         function myDesigns_open() {
             document.getElementById("mySidebar").style.display = "block";
@@ -252,6 +283,7 @@
             document.getElementById("mySidebar").style.display = "none";
             document.getElementById("myOverlay").style.display = "none";
         }
+
     </script>
 </body>
 </html>
