@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <title>МАГАЗИН ТЕХНИКИ</title>
@@ -28,9 +28,9 @@
             <h3 class="myDesigns-wide"><b>TA MINH DUC</b></h3>
         </div>
         <div class="myDesigns-padding-64 myDesigns-large myDesigns-text-grey" style="font-weight:bold">
-            <a href="index.html" class="myDesigns-bar-item myDesigns-button">Каталог</a>
+            <a href="index.html" class="myDesigns-button myDesigns-block myDesigns-white myDesigns-left-align">Каталог</a>
             <a href="news.html" class="myDesigns-bar-item myDesigns-button">Новости</a>
-            <a href="shipping.html" class="myDesigns-button myDesigns-block myDesigns-white myDesigns-left-align">Форма доставки</a>
+            <a href="shipping.html" class="myDesigns-bar-item myDesigns-button">Форма доставки</a>
             <a href="#footer" class="myDesigns-bar-item myDesigns-button">Контакты</a>
             <a href="#footer" class="myDesigns-bar-item myDesigns-button">О нас</a>
         </div>
@@ -50,120 +50,112 @@
         <div class="myDesigns-hide-large" style="margin-top:83px"></div>
         <!-- Top header -->
         <header class="myDesigns-container myDesigns-xlarge">
-            <p class="myDesigns-left">Форма доставки</p>
+            <p class="myDesigns-left">Компьютерные Техники</p>
             <p class="myDesigns-right">
                 <i class="fa fa-shopping-cart myDesigns-margin-right"></i>
                 <i class="fa fa-search"></i>
             </p>
-            <!--<form>
-                <input type="text" name="search" placeholder="Search..">
-            </form>-->
+            <!-- <form>
+                <input type="textfile" name="search" placeholder="Search..">
+            </form> -->
         </header>
-        <div class="container">
-            <div id="billingsheet"></div>
-            <form id="orderform">
-                <div class="row">
-                    <div class="col-25">
-                        <label for="fname">Фаимлия</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="text" id="fname" name="firstname" placeholder="Твоя фамилия.." required>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-25">
-                        <label for="lname">Имя</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="text" id="lname" name="lastname" placeholder="Твоё имя.." required>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-25">
-                        <label for="oname">Отчество</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="text" id="oname" name="oname" placeholder="Твоё отчество..">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-25">
-                        <label for="phone">Номер телефона</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="tel" id="phone" name="phone" placeholder="Номер телефона" required>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-25">
-                        <label for="email">Email</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="email" id="email" name="email" placeholder="Электронная почта">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-25">
-                        <label for="country">Старна</label>
-                    </div>
-                    <div class="col-75">
-                        <select id="country" name="country" required>
-                            <option value="russia">Россия</option>
-                            <option value="vietnam">Вьетнам</option>
-                            <option value="usa">США</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-25">
-                        <label for="transType">Тип отгрузки</label>
-                    </div>
-                    <div class="col-75">
-                        <div class="form_radio_btn">
-                            <input id="radio1" type="radio" name="radio" value=1 checked>
-                            <label for="radio1">Обычно</label>
-                        </div>
-
-                        <div class="form_radio_btn">
-                            <input id="radio2" type="radio" name="radio" value=2>
-                            <label for="radio2">Экпресс</label>
-                        </div>
-
-                        <div class="form_radio_btn">
-                            <input id="radio3" type="radio" name="radio" value=3 disabled>
-                            <label for="radio3">EMS</label>
+        <!-- Image header -->
+        <div class="myDesigns-display-container myDesigns-container">
+            <img src="images/parts.jpg" alt="RTX 3060" style="width:100%">
+            <div class="myDesigns-display-topleft myDesigns-text-white" style="padding:24px 48px">
+                <h1 class="myDesigns-jumbo myDesigns-hide-small">Лучшие цены</h1>
+                <h1 class="myDesigns-hide-large myDesigns-hide-medium">Лучшие цены</h1>
+                <h1 class="myDesigns-hide-small">КОЛЛЕКЦИЯ 2021</h1>
+                <p><a href="#items" class="myDesigns-button myDesigns-black myDesigns-padding-large myDesigns-large">В ПОКУПКУ</a></p>
+            </div>
+        </div>
+        <div class="myDesigns-container myDesigns-text-grey" id="items">
+            <p>8 товары</p>
+        </div>
+        <!-- Product grid -->
+        <div class="myDesigns-row myDesigns-grayscale">
+            <div class="myDesigns-col l3 s6">
+                <div class="myDesigns-container">
+                    <div class="myDesigns-display-container">
+                        <img src="images/parts1.jpg" style="width:100%">
+                        <div class="myDesigns-display-middle myDesigns-display-hover">
+                            <button class="myDesigns-button myDesigns-black">Купить<i class="fa fa-shopping-cart"></i></button>
                         </div>
                     </div>
+                    <p>nVidia RTX 3060<br><b>100.000₽</b></p>
                 </div>
-                <div class="row">
-                    <div class="col-25">
-                        <label for="arriveDate">Дата получения</label>
+                <div class="myDesigns-container">
+                    <div class="myDesigns-display-container">
+                        <img src="images/parts2.jpg" style="width:100%">
+                        <div class="myDesigns-display-middle myDesigns-display-hover">
+                            <button class="myDesigns-button myDesigns-black">Купить<i class="fa fa-shopping-cart"></i></button>
+                        </div>
                     </div>
-                    <div class="col-75">
-                        <input type="date" id="arriveDate" name="arriveDate">
-                    </div>
+                    <p>AMD Ryzen 9 5900x<br><b>35.000₽</b></p>
                 </div>
-                <div class="row">
-                    <div class="col-25">
-                        <label for="subject">Комментария</label>
+            </div>
+            <div class="myDesigns-col l3 s6">
+                <div class="myDesigns-container">
+                    <div class="myDesigns-display-container">
+                        <img src="images/parts3.jpg" style="width:100%">
+                        <span class="myDesigns-tag myDesigns-display-topleft">Новинка</span>
+                        <div class="myDesigns-display-middle myDesigns-display-hover">
+                            <button class="myDesigns-button myDesigns-black">Купить<i class="fa fa-shopping-cart"></i></button>
+                        </div>
                     </div>
-                    <div class="col-75">
-                        <textarea id="subject" name="subject" placeholder="Пишите что-нибудь..." style="height:200px"></textarea>
-                    </div>
+                    <p>Corsair Dominator DDR5<br><b>20.000₽</b></p>
                 </div>
-                <div class="row">
-                    <div class="col-25">
-                        <label for="subject">Промокод</label>
+                <div class="myDesigns-container">
+                    <div class="myDesigns-display-container">
+                        <img src="images/parts4.jpg" style="width:100%">
+                        <div class="myDesigns-display-middle myDesigns-display-hover">
+                            <button class="myDesigns-button myDesigns-black">Купить<i class="fa fa-shopping-cart"></i></button>
+                        </div>
                     </div>
-                    <div class="col-75">
-                        <input type="text" id="promocode" name="promocode" placeholder="Промокод">
+                    <p>Intel Core i9 11900k<br><b>40.000₽</b></p>
+                </div>
+            </div>
+            <div class="myDesigns-col l3 s6">
+                <div class="myDesigns-container">
+                    <div class="myDesigns-display-container">
+                        <img src="images/parts5.jpg" style="width:100%">
+                        <div class="myDesigns-display-middle myDesigns-display-hover">
+                            <button class="myDesigns-button myDesigns-black">Купить<i class="fa fa-shopping-cart"></i></button>
+                        </div>
                     </div>
+                    <p>msi Z490<br><b>30.000₽</b></p>
                 </div>
-                <br>
-                <div class="row">
-                    <input href="thankyou.html" type="submit" value="Заказать" onclick="insertIntoDB()">
+                <div class="myDesigns-container">
+                    <div class="myDesigns-display-container">
+                        <img src="images/parts6.jpg" style="width:100%">
+                        <span class="myDesigns-tag myDesigns-display-topleft">Распродажа</span>
+                        <div class="myDesigns-display-middle myDesigns-display-hover">
+                            <button class="myDesigns-button myDesigns-black">Купить<i class="fa fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                    <p>Samsung EVO 980 PRO<br><b class="myDesigns-text-red">25.000₽</b></p>
                 </div>
-            </form>
+            </div>
+            <div class="myDesigns-col l3 s6">
+                <div class="myDesigns-container">
+                    <div class="myDesigns-display-container">
+                        <img src="images/parts7.jpg" style="width:100%">
+                        <div class="myDesigns-display-middle myDesigns-display-hover">
+                            <button class="myDesigns-button myDesigns-black">Купить<i class="fa fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                    <p>Logitech G Pro<br><b>15.000₽</b></p>
+                </div>
+                <div class="myDesigns-container">
+                    <div class="myDesigns-display-container">
+                        <img src="images/parts8.jpg" style="width:100%">
+                        <div class="myDesigns-display-middle myDesigns-display-hover">
+                            <button class="myDesigns-button myDesigns-black">Купить<i class="fa fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                    <p>Logitech G Pro X<br><b>10.000₽</b></p>
+                </div>
+            </div>
         </div>
         <!-- Subscribe section -->
         <div class="myDesigns-container myDesigns-black myDesigns-padding-32">
@@ -188,7 +180,7 @@
                 </div>
                 <div class="myDesigns-col s4">
                     <h4>О нас</h4>
-                    <p><a href="#">О нас, короче</a></p>
+                    <p><a href="aboutUs.html">О нас, короче</a></p>
                     <p><a href="#">Мы нанимаем</a></p>
                     <p><a href="#">Поддержка</a></p>
                     <p><a href="#">Найти магазин</a></p>
@@ -232,37 +224,6 @@
         </div>
     </div>
     <script>
-        var date = new Date();
-        date.setDate(date.getDate() + 3);
-        arriveDate.min = date.toISOString().split("T")[0];
-
-        // Insert into DB
-        function insertIntoDB() {
-            var fname = document.getElementById("orderform").firstname.value;
-            var lname = document.getElementById("orderform").lastname.value;
-            var pname = document.getElementById("orderform").oname.value;
-            var phone = document.getElementById("orderform").phone.value;
-            var email = document.getElementById("orderform").email.value;
-            var country = document.getElementById("orderform").country.value;
-            var transType = document.getElementById("orderform").transType.value;
-            var arriveDate = document.getElementById("orderform").arriveDate.value;
-            var comment = document.getElementById("orderform").subject.value;
-
-            const sqlite3 = require('sqlite3').verbose();
-            let db = new sqlite3.Database('../db/orders.db');
-
-            // insert one row into the langs table
-            db.run(`INSERT INTO orders(fname,lname,pname,tel,email,country,typeofshipping,dateofreceive,comment) VALUES(?,?,?,?,?,?,?,?,?)`, [fname,lname,pname,phone,email,country,transType,arriveDate,comment], function (err) {
-                if (err) {
-                    return console.log(err.message);
-                }
-                // get the last insert id
-                alert(`A row has been inserted with rowid ${this.lastID}`);
-            });
-            // close the database connection
-            db.close();
-        }
-
         // Accordion
         function myAccFunc() {
             var x = document.getElementById("demoAcc");
@@ -272,6 +233,10 @@
                 x.className = x.className.replace(" myDesigns-show", "");
             }
         }
+
+        // Click on the "Jeans" link on page load to open the accordion for demo purposes
+        document.getElementById("myBtn").click();
+
 
         // Open and close sidebar
         function myDesigns_open() {
@@ -283,7 +248,6 @@
             document.getElementById("mySidebar").style.display = "none";
             document.getElementById("myOverlay").style.display = "none";
         }
-
     </script>
 </body>
 </html>
