@@ -162,7 +162,6 @@
           cellDiv.appendChild(cellInput);
           if (columnType == 'Сумма (₽)') {
             columnTypes[columnType] = 5 * 10;
-            console.log(columnTypes);
             cellInput.setAttribute('number', columnTypes[columnType]);
           }
           else {
